@@ -15,13 +15,13 @@ a:visited {
   color: hsl(262, 47%, 63%);
 }
 
-.header {
+.sharing {
   display: flex;
   flex-direction: row;
   align-items: baseline;
 }
 
-.header > * {
+.sharing > * {
   margin-right: 1rem;
 }
 
@@ -46,6 +46,7 @@ a:visited {
 .filters {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 1rem;
 }
@@ -54,16 +55,18 @@ a:visited {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   width: 12rem;
   height: 10rem;
   margin-bottom: 2rem;
   cursor: pointer;
+  border: 1px solid transparent;
 }
 
 .IconHit-icon {
   font-size: 4em;
   color: hsl(262, 52%, 47%);
-  transition: color 0.5s ease;
+  transition: all 0.5s ease;
   align-self: center;
 }
 
@@ -80,6 +83,11 @@ a:visited {
   text-align: center;
   font-size: 0.75rem;
   opacity: 0.8;
+}
+
+.IconHit:hover {
+  border-color: hsl(262, 47%, 63%);
+  border-radius: 2px;
 }
 
 .IconHit:hover > .IconHit-icon {
@@ -156,6 +164,7 @@ a:visited {
   list-style: none;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .ais-Menu-item {
@@ -164,6 +173,7 @@ a:visited {
   border: 1px solid hsl(262, 52%, 47%);
   border-radius: 2px;
   padding: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .ais-Menu-item:not(:last-child) {

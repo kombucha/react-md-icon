@@ -45,15 +45,17 @@ class App extends React.Component {
       <InstantSearch appId="K7NSWJYFK0" apiKey="6c8d7f6e3e6627a946459e7be11d133a" indexName="react-md-icon">
         <Configure hitsPerPage={40} />
         <div className="content">
-          <div className="header">
-            <h1>react-md-icon</h1>
+          <h1>react-md-icon</h1>
+
+          <div className="section sharing">
             <Share url="https://react-md-icon.netlify.com/" />
             <Follow username="mrkombu" />
           </div>
 
-          <p className="section">
-            Get the latest material icons ! <a href="#install">Learn how to use it</a>.
-          </p>
+          <div className="section">
+            Get the latest material icons ! <br />
+            <a href="#install">Learn how to use it</a>.
+          </div>
 
           <div className="section">
             <h2>Icons</h2>
