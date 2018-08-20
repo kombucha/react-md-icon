@@ -39,12 +39,12 @@
     "mkdirp": "^0.5.1",
     "p-all": "^1.0.0",
     "parcel-bundler": "^1.9.7",
+    "parcel-plugin-bundle-visualiser": "^1.1.2",
     "progress": "^2.0.0",
     "react": "^16.4.2",
     "react-copy-to-clipboard": "^5.0.1",
     "react-dom": "^16.4.2",
     "react-instantsearch": "^5.2.3",
-    "react-syntax-highlighter": "^8.0.1",
     "react-toastify": "^4.2.0",
     "react-twitter-widgets": "^1.7.1",
     "svgo": "^1.0.5"

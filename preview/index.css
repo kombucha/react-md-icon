@@ -35,8 +35,12 @@ a:visited {
 }
 
 .code {
-  padding: 1rem !important;
+  padding: 1rem;
   border-radius: 2px;
+  display: block;
+  overflow-x: auto;
+  background: rgb(39, 40, 34);
+  color: rgb(221, 221, 221);
 }
 
 .section {
@@ -141,6 +145,10 @@ a:visited {
 }
 
 /* Pagination */
+.ais-Pagination {
+  user-select: none;
+}
+
 .ais-Pagination-link {
   border-radius: 2px;
   border: none;

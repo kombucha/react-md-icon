@@ -14,15 +14,7 @@ import { Follow, Share } from "react-twitter-widgets";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { ToastContainer, toast } from "react-toastify";
 
-import SyntaxHighlighter, { registerLanguage } from "react-syntax-highlighter/light";
-import js from "react-syntax-highlighter/languages/hljs/javascript";
-import shell from "react-syntax-highlighter/languages/hljs/shell";
-import monokai from "react-syntax-highlighter/styles/hljs/monokai";
-
 import "react-toastify/dist/ReactToastify.css";
-
-registerLanguage("javascript", js);
-registerLanguage("shell", shell);
 
 const IconHit = ({ hit }) => (
   <CopyToClipboard
@@ -77,9 +69,7 @@ class App extends React.Component {
 
           <div id="install" className="section">
             <h2>Install it</h2>
-            <SyntaxHighlighter className="code" language="shell" style={monokai}>
-              {`npm install react-md-icon`}
-            </SyntaxHighlighter>
+            <code className="code">{`npm install react-md-icon`}</code>
           </div>
 
           <div className="section">
