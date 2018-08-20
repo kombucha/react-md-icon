@@ -16,9 +16,9 @@
   },
   "scripts": {
     "icons:update": "node lib/download",
-    "build:icons": "node lib/convert-to-react && babel --out-dir dist react",
-    "build:preview": "webpack --config preview/webpack.config.js --output-path preview/build preview",
-    "build:netlify": "npm run build:icons && npm run build:preview"
+    "icons:build": "node lib/convert-to-react && babel --out-dir dist react",
+    "preview:build": "webpack --config preview/webpack.config.js --output-path preview/build preview",
+    "build:netlify": "npm run icons:build && npm run preview:buildpreview"
   },
   "dependencies": {},
   "devDependencies": {

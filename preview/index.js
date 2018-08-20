@@ -5,7 +5,7 @@ import SyntaxHighlighter, { registerLanguage } from "react-syntax-highlighter/li
 import js from "react-syntax-highlighter/languages/hljs/javascript";
 import shell from "react-syntax-highlighter/languages/hljs/shell";
 import monokai from "react-syntax-highlighter/styles/hljs/monokai";
-import { Follow } from "react-twitter-widgets";
+import { Follow, Share } from "react-twitter-widgets";
 
 import * as mdIcons from "../dist/index.js";
 
@@ -30,7 +30,7 @@ class App extends React.Component {
       : allIconNames;
 
     return (
-      <div id="content">
+      <div className="content">
         <a href="https://github.com/kombucha/react-md-icon" target="_blank" rel="noopener noreferrer">
           <img
             style={{ position: "absolute", top: 0, right: 0, border: 0 }}
@@ -38,7 +38,12 @@ class App extends React.Component {
             alt="Fork me on GitHub"
           />
         </a>
-        <h1>react-md-icon</h1>
+
+        <div className="header">
+          <h1>react-md-icon </h1>
+          <Share url="https://react-md-icon.netlify.com/" />
+          <Follow username="mrkombu" />
+        </div>
 
         <div className="section">
           <h2>Install it</h2>
@@ -49,19 +54,11 @@ class App extends React.Component {
 
         <div className="section">
           <h2>Use it</h2>
-          <SyntaxHighlighter className="code" language="jsx" style={monokai}>
-            {`
-import React from 'react';
-import BaselineAnnouncement from 'react-md-icon/dist/BaselineAnnouncement';
-
-const MyComponent = <div>
-  <BaselineAnnoucement />
-</div>;`}
-          </SyntaxHighlighter>
-        </div>
-
-        <div className="section">
-          <Follow username="mrkombu" />
+          <iframe
+            src="https://codesandbox.io/embed/z3y480kv73"
+            style={{ width: "100%", height: 500, border: 0, borderRadius: 4, overflow: "hidden" }}
+            sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
+          />
         </div>
 
         <div className="section">
