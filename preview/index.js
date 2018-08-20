@@ -31,6 +31,14 @@ const IconHit = ({ hit }) => (
   </CopyToClipboard>
 );
 
+const TitleAnchor = ({ id, children }) => (
+  <h2>
+    <a className="TitleAnchor" id={id} href={`#${id}`}>
+      {children}
+    </a>
+  </h2>
+);
+
 class App extends React.Component {
   render() {
     return (
@@ -50,7 +58,7 @@ class App extends React.Component {
           </div>
 
           <div className="section">
-            <h2>Icons</h2>
+            <TitleAnchor id="icons">Icons</TitleAnchor>
 
             <SearchBox autoFocus placeholder="Search icon names..." />
             <div className="filters">
@@ -67,13 +75,13 @@ class App extends React.Component {
             <Pagination />
           </div>
 
-          <div id="install" className="section">
-            <h2>Install it</h2>
-            <code className="code">{`npm install react-md-icon`}</code>
+          <div className="section">
+            <TitleAnchor id="install">Install it</TitleAnchor>
+            <code>{`npm install react-md-icon`}</code>
           </div>
 
           <div className="section">
-            <h2>Use it</h2>
+            <TitleAnchor id="use-it">Use it</TitleAnchor>
             <iframe
               src="https://codesandbox.io/embed/z3y480kv73"
               style={{ width: "100%", height: 500, border: 0, borderRadius: 4, overflow: "hidden" }}

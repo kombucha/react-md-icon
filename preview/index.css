@@ -15,6 +15,33 @@ a:visited {
   color: hsl(262, 47%, 63%);
 }
 
+code {
+  padding: 1rem;
+  border-radius: 2px;
+  display: block;
+  overflow-x: auto;
+  background: rgb(39, 40, 34);
+  color: rgb(221, 221, 221);
+  white-space: pre;
+}
+
+.TitleAnchor {
+  color: inherit !important;
+  position: relative;
+  text-decoration: none;
+}
+
+.TitleAnchor:hover {
+  text-decoration: underline;
+}
+
+.TitleAnchor:hover::before {
+  content: "#";
+  position: absolute;
+  right: 100%;
+  margin-right: 0.2em;
+}
+
 .sharing {
   display: flex;
   flex-direction: row;
@@ -32,15 +59,6 @@ a:visited {
   max-width: 1024px;
   margin: 0 auto;
   padding: 1rem;
-}
-
-.code {
-  padding: 1rem;
-  border-radius: 2px;
-  display: block;
-  overflow-x: auto;
-  background: rgb(39, 40, 34);
-  color: rgb(221, 221, 221);
 }
 
 .section {
