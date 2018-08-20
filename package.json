@@ -15,12 +15,10 @@
     "url": "https://github.com/kombucha/react-md-icons"
   },
   "scripts": {
-    "build": "npm run update-svgs && npm run convert-to-react && npm run generate:dist",
+    "icons:update": "node lib/download",
+    "build:icons": "node lib/convert-to-react && babel --out-dir dist react",
     "build:preview": "webpack --config preview/webpack.config.js --output-path preview/build preview",
-    "build:netlify": "npm run convert-to-react && npm run generate:dist && npm run build:preview",
-    "update-svgs": "node lib/download",
-    "convert-to-react": "node lib/convert-to-react",
-    "generate:dist": "babel --out-dir dist react"
+    "build:netlify": "npm run build:icons && npm run build:preview"
   },
   "dependencies": {},
   "devDependencies": {
