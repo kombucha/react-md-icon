@@ -67,6 +67,7 @@ const MyComponent = <div>
         <div className="section">
           <input
             className="search-input"
+            autoFocus
             type="text"
             placeholder="Search for icon names..."
             value={searchText}
