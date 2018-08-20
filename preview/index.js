@@ -46,12 +46,14 @@ class App extends React.Component {
         <Configure hitsPerPage={40} />
         <div className="content">
           <div className="header">
-            <h1>react-md-icon </h1>
+            <h1>react-md-icon</h1>
             <Share url="https://react-md-icon.netlify.com/" />
             <Follow username="mrkombu" />
           </div>
 
-          <p className="section">Get the latest material icons !</p>
+          <p className="section">
+            Get the latest material icons ! <a href="#install">Learn how to use it</a>.
+          </p>
 
           <div className="section">
             <h2>Icons</h2>
@@ -71,7 +73,7 @@ class App extends React.Component {
             <Pagination />
           </div>
 
-          <div className="section">
+          <div id="install" className="section">
             <h2>Install it</h2>
             <SyntaxHighlighter className="code" language="shell" style={monokai}>
               {`npm install react-md-icon`}
