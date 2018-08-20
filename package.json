@@ -18,7 +18,7 @@
     "icons:build": "node -r dotenv/config lib/build",
     "preview:dev": "parcel serve -d preview/build preview/index.html",
     "preview:build": "parcel build -d preview/build preview/index.html",
-    "build:netlify": "npm run icons:build && npm run preview:build"
+    "build:netlify": "npm run preview:build"
   },
   "dependencies": {},
   "devDependencies": {
