@@ -16,7 +16,7 @@
   },
   "scripts": {
     "build": "npm run update-svgs && npm run convert-to-react && npm run generate:dist",
-    "preview:dev": "parcel preview/index.html",
+    "preview:build": "webpack --config preview/webpack.config.js --output-path preview/build preview",
     "update-svgs": "node lib/download",
     "convert-to-react": "node lib/convert-to-react",
     "generate:dist": "babel --out-dir dist react"
@@ -25,15 +25,24 @@
   "devDependencies": {
     "@svgr/core": "^2.2.0",
     "babel-cli": "6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
     "babel-plugin-transform-es2015-modules-commonjs": "6.26.2",
-    "babel-preset-react": "6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
     "camelcase": "^5.0.0",
+    "del": "^3.0.0",
+    "eslint": "^5.4.0",
     "got": "^9.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "mkdirp": "^0.5.1",
     "p-all": "^1.0.0",
-    "parcel-bundler": "^1.9.7",
     "progress": "^2.0.0",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
-    "svgo": "^1.0.5"
+    "svgo": "^1.0.5",
+    "webpack": "^4.16.5",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.5"
   }
 }
