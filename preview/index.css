@@ -50,6 +50,7 @@ body {
   width: 12rem;
   height: 10rem;
   margin-bottom: 2rem;
+  cursor: pointer;
 }
 
 .IconHit-icon {
@@ -187,4 +188,15 @@ body {
 }
 .ais-Menu-count::after {
   content: ")";
+}
+
+/* Toastify */
+.Toastify__toast {
+  padding: 1rem;
+  background: hsl(262, 52%, 47%);
+  color: white;
+}
+
+.Toastify__close-button {
+  display: none;
 }

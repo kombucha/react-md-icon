@@ -11,21 +11,32 @@ import {
   PoweredBy
 } from "react-instantsearch-dom";
 import { Follow, Share } from "react-twitter-widgets";
+import { CopyToClipboard } from "react-copy-to-clipboard";
+import { ToastContainer, toast } from "react-toastify";
 
 import SyntaxHighlighter, { registerLanguage } from "react-syntax-highlighter/light";
 import js from "react-syntax-highlighter/languages/hljs/javascript";
 import shell from "react-syntax-highlighter/languages/hljs/shell";
 import monokai from "react-syntax-highlighter/styles/hljs/monokai";
 
+import "react-toastify/dist/ReactToastify.css";
+
 registerLanguage("javascript", js);
 registerLanguage("shell", shell);
 
 const IconHit = ({ hit }) => (
-  <div className="IconHit">
-    <div className="IconHit-icon" dangerouslySetInnerHTML={{ __html: hit.svg }} />
-    <Highlight className="IconHit-name" attribute="name" hit={hit} />
-    <span className="IconHit-theme">({hit.theme})</span>
-  </div>
+  <CopyToClipboard
+    text={hit.componentName}
+    onCopy={() => {
+      toast("Component name copied to clipboard!");
+    }}
+  >
+    <div className="IconHit">
+      <div className="IconHit-icon" dangerouslySetInnerHTML={{ __html: hit.svg }} />
+      <Highlight className="IconHit-name" attribute="name" hit={hit} />
+      <span className="IconHit-theme">({hit.theme})</span>
+    </div>
+  </CopyToClipboard>
 );
 
 class App extends React.Component {
@@ -75,6 +86,16 @@ class App extends React.Component {
               sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
             />
           </div>
+
+          <ToastContainer
+            position="top-right"
+            autoClose={3000}
+            hideProgressBar
+            newestOnTop={false}
+            pauseOnVisibilityChange={false}
+            draggable={false}
+            pauseOnHover={false}
+          />
         </div>
       </InstantSearch>
     );
