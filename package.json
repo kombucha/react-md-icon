@@ -16,21 +16,24 @@
   },
   "scripts": {
     "build": "npm run update-svgs && npm run convert-to-react && npm run generate:dist",
+    "preview:dev": "parcel preview/index.html",
     "update-svgs": "node lib/download",
     "convert-to-react": "node lib/convert-to-react",
     "generate:dist": "babel --out-dir dist react"
   },
-  "dependencies": {
-    "@svgr/core": "2.2.0",
-    "camelcase": "5.0.0",
-    "got": "9.0.0",
-    "p-all": "1.0.0",
-    "progress": "2.0.0",
-    "svgo": "1.0.5"
-  },
+  "dependencies": {},
   "devDependencies": {
+    "@svgr/core": "^2.2.0",
     "babel-cli": "6.26.0",
     "babel-plugin-transform-es2015-modules-commonjs": "6.26.2",
-    "babel-preset-react": "6.24.1"
+    "babel-preset-react": "6.24.1",
+    "camelcase": "^5.0.0",
+    "got": "^9.0.0",
+    "p-all": "^1.0.0",
+    "parcel-bundler": "^1.9.7",
+    "progress": "^2.0.0",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "svgo": "^1.0.5"
   }
 }
