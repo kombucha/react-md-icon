@@ -116,6 +116,5 @@ Temporary Items
 
 # Specific
 dist/
-react/
 preview/build
 .cache
