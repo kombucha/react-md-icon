@@ -65,3 +65,14 @@ body {
 .icon-item:hover > .icon {
   color: #9575cd;
 }
+
+.search-input {
+  width: 100%;
+  padding: 1rem;
+  line-height: 2rem;
+  font-size: 1.2rem;
+  border-radius: 2px;
+  box-shadow: none;
+  border: 1px solid #673ab7;
+  outline-color: #673ab7;
+}

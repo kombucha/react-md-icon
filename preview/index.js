@@ -14,8 +14,21 @@ import "./index.css";
 registerLanguage("javascript", js);
 registerLanguage("shell", shell);
 
+const allIconNames = Object.keys(mdIcons);
+
 class App extends React.Component {
+  state = { searchText: "" };
+
+  handleSearchChange = evt => this.setState({ searchText: evt.target.value });
+
   render() {
+    const { searchText } = this.state;
+
+    const preparedSearchText = searchText.toLowerCase();
+    const iconNames = searchText
+      ? allIconNames.filter(name => name.toLowerCase().includes(preparedSearchText))
+      : allIconNames;
+
     return (
       <div id="content">
         <a href="https://github.com/kombucha/react-md-icon" target="_blank" rel="noopener noreferrer">
@@ -52,8 +65,18 @@ const MyComponent = <div>
         </div>
 
         <div className="section">
+          <input
+            className="search-input"
+            type="text"
+            placeholder="Search for icon names..."
+            value={searchText}
+            onChange={this.handleSearchChange}
+          />
+        </div>
+
+        <div className="section">
           <ul className="icons-list">
-            {Object.keys(mdIcons).map(iconName => {
+            {iconNames.map(iconName => {
               const Icon = mdIcons[iconName];
               return (
                 <li className="icon-item" id={iconName} key={iconName}>
