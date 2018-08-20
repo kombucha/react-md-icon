@@ -16,7 +16,8 @@
   },
   "scripts": {
     "build": "npm run update-svgs && npm run convert-to-react && npm run generate:dist",
-    "preview:build": "webpack --config preview/webpack.config.js --output-path preview/build preview",
+    "build:preview": "webpack --config preview/webpack.config.js --output-path preview/build preview",
+    "build:netlify": "npm run convert-to-react && npm run generate:dist && npm run preview:build",
     "update-svgs": "node lib/download",
     "convert-to-react": "node lib/convert-to-react",
     "generate:dist": "babel --out-dir dist react"
