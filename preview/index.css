@@ -1,0 +1,66 @@
+html,
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.code {
+  padding: 1rem !important;
+  border-radius: 2px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icons-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.icon-item {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  width: 12rem;
+  height: 10rem;
+}
+
+.icon {
+  font-size: 4em;
+  color: #673ab7;
+  margin: 2rem;
+  transition: color 0.5s ease;
+  align-self: center;
+}
+
+.icon-title {
+  margin-top: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.icon-item:hover > .icon {
+  color: #9575cd;
+}

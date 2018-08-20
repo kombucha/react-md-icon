@@ -1,4 +1,5 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
+const postcssPresetEnv = require("postcss-preset-env");
 
 const htmlPlugin = new HtmlWebPackPlugin({
   template: "./preview/index.html",
@@ -14,6 +15,20 @@ module.exports = {
         use: {
           loader: "babel-loader"
         }
+      },
+      {
+        test: /\.css$/,
+        use: [
+          "style-loader",
+          { loader: "css-loader", options: { importLoaders: 1 } },
+          {
+            loader: "postcss-loader",
+            options: {
+              ident: "postcss",
+              plugins: () => [postcssPresetEnv()]
+            }
+          }
+        ]
       }
     ]
   },
