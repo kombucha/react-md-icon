@@ -43,13 +43,6 @@ class App extends React.Component {
           <p className="section">Get the latest material icons !</p>
 
           <div className="section">
-            <h2>Install it</h2>
-            <SyntaxHighlighter className="code" language="shell" style={monokai}>
-              {`npm install react-md-icon`}
-            </SyntaxHighlighter>
-          </div>
-
-          <div className="section">
             <h2>Icons</h2>
 
             <SearchBox autoFocus placeholder="Search icon names..." />
@@ -65,6 +58,13 @@ class App extends React.Component {
 
           <div className="section">
             <Pagination />
+          </div>
+
+          <div className="section">
+            <h2>Install it</h2>
+            <SyntaxHighlighter className="code" language="shell" style={monokai}>
+              {`npm install react-md-icon`}
+            </SyntaxHighlighter>
           </div>
 
           <div className="section">
