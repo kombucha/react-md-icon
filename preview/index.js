@@ -5,6 +5,7 @@ import SyntaxHighlighter, { registerLanguage } from "react-syntax-highlighter/li
 import js from "react-syntax-highlighter/languages/hljs/javascript";
 import shell from "react-syntax-highlighter/languages/hljs/shell";
 import monokai from "react-syntax-highlighter/styles/hljs/monokai";
+import { Follow } from "react-twitter-widgets";
 
 import * as mdIcons from "../dist/index.js";
 
@@ -38,12 +39,16 @@ class App extends React.Component {
           <SyntaxHighlighter className="code" language="jsx" style={monokai}>
             {`
 import React from 'react';
-import BaselineAnnouncement from 'dist/BaselineAnnouncement';
+import BaselineAnnouncement from 'react-md-icon/dist/BaselineAnnouncement';
 
 const MyComponent = <div>
   <BaselineAnnoucement />
 </div>;`}
           </SyntaxHighlighter>
+        </div>
+
+        <div className="section">
+          <Follow username="mrkombu" />
         </div>
 
         <div className="section">

@@ -44,6 +44,7 @@
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-syntax-highlighter": "^8.0.1",
+    "react-twitter-widgets": "^1.7.1",
     "style-loader": "^0.22.1",
     "svgo": "^1.0.5",
     "webpack": "^4.16.5",
