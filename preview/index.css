@@ -7,6 +7,13 @@ body {
 * {
   box-sizing: border-box;
 }
+a {
+  color: hsl(262, 52%, 47%);
+}
+
+a:visited {
+  color: hsl(262, 47%, 63%);
+}
 
 .header {
   display: flex;
@@ -76,7 +83,7 @@ body {
 }
 
 .IconHit:hover > .IconHit-icon {
-  color: #9575cd;
+  color: hsl(262, 47%, 63%);
 }
 
 /* Algolia styles overrides */
