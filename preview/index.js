@@ -62,7 +62,12 @@ class App extends React.Component {
 
             <SearchBox autoFocus placeholder="Search icon names..." />
             <div className="filters">
-              <Menu attribute="theme" operator="and" />
+              <Menu
+                attribute="theme"
+                operator="and"
+                transformItems={items => items.sort((a, b) => (a < b ? -1 : 1))}
+                defaultRefinement="baseline"
+              />
               <PoweredBy />
             </div>
           </div>
