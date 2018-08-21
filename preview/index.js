@@ -80,8 +80,25 @@ class App extends React.Component {
           </div>
 
           <div className="section">
-            Get the latest material icons ! <br />
-            <a href="#install">Learn how to use it</a>.
+            <p>
+              Get the latest{" "}
+              <a href="https://material.io/tools/icons/?style=baseline" rel="noopener noreferrer" target="_blank">
+                Material icons
+              </a>{" "}
+              ! All the 1000+ icons are available in 5 flavours.
+            </p>
+            Guide:
+            <ol>
+              <li>
+                <a href="#icons">See the icons</a>
+              </li>
+              <li>
+                <a href="#install">Install</a>
+              </li>
+              <li>
+                <a href="#usage">Usage</a>
+              </li>
+            </ol>
           </div>
 
           <div className="section">
@@ -107,7 +124,7 @@ class App extends React.Component {
           </div>
 
           <div className="section">
-            <TitleAnchor id="use-it">Use it</TitleAnchor>
+            <TitleAnchor id="usage">Use it</TitleAnchor>
             <iframe
               src="https://codesandbox.io/embed/z3y480kv73"
               style={{ width: "100%", height: 500, border: 0, borderRadius: 4, overflow: "hidden" }}
