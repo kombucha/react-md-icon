@@ -4,6 +4,7 @@ import {
   InstantSearch,
   SearchBox,
   Hits,
+  connectStats,
   Menu,
   Pagination,
   Highlight,
@@ -15,6 +16,8 @@ import { CopyToClipboard } from "react-copy-to-clipboard";
 import { ToastContainer, toast } from "react-toastify";
 
 import "react-toastify/dist/ReactToastify.css";
+
+const HITS_PER_PAGE = 40;
 
 const IconHit = ({ hit }) => (
   <CopyToClipboard
@@ -39,11 +42,26 @@ const TitleAnchor = ({ id, children }) => (
   </h2>
 );
 
+const IconHits = connectStats(({ nbHits }) => {
+  const shouldRenderPagination = nbHits > HITS_PER_PAGE;
+
+  return (
+    <React.Fragment>
+      <div className="section">{nbHits === 0 ? <span>No results</span> : <Hits hitComponent={IconHit} />}</div>
+      {shouldRenderPagination && (
+        <div className="section">
+          <Pagination />
+        </div>
+      )}
+    </React.Fragment>
+  );
+});
+
 class App extends React.Component {
   render() {
     return (
       <InstantSearch appId="K7NSWJYFK0" apiKey="6c8d7f6e3e6627a946459e7be11d133a" indexName="react-md-icon">
-        <Configure hitsPerPage={40} />
+        <Configure hitsPerPage={HITS_PER_PAGE} />
         <div className="content">
           <h1>react-md-icon</h1>
 
@@ -81,13 +99,7 @@ class App extends React.Component {
             </div>
           </div>
 
-          <div className="section">
-            <Hits hitComponent={IconHit} />
-          </div>
-
-          <div className="section">
-            <Pagination />
-          </div>
+          <IconHits />
 
           <div className="section">
             <TitleAnchor id="install">Install it</TitleAnchor>
