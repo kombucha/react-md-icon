@@ -48,6 +48,15 @@ class App extends React.Component {
           <h1>react-md-icon</h1>
 
           <div className="section sharing">
+            <a
+              className="github-button"
+              href="https://github.com/kombucha/react-md-icon"
+              data-icon="octicon-star"
+              data-show-count="true"
+              aria-label="Star kombucha/react-md-icon on GitHub"
+            >
+              Star
+            </a>
             <Share url="https://react-md-icon.netlify.com/" />
             <Follow username="mrkombu" />
           </div>
