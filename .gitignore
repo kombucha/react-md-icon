@@ -115,6 +115,7 @@ Temporary Items
 # End of https://www.gitignore.io/api/osx,node,code
 
 # Specific
-dist/
+dist/*
+!dist/_objectAssignPolyfill.js
 preview/build
 .cache
