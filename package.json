@@ -13,6 +13,14 @@
     "type": "git",
     "url": "https://github.com/kombucha/react-md-icons"
   },
+  "keywords": [
+    "react",
+    "reactjs",
+    "material-design",
+    "material",
+    "icon",
+    "icons"
+  ],
   "scripts": {
     "icons:update": "node -r dotenv/config lib/download",
     "icons:build": "node -r dotenv/config lib/build",
