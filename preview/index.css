@@ -83,13 +83,14 @@ code {
   height: 10rem;
   margin-bottom: 2rem;
   cursor: pointer;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
+  transition: border-color 0.2s ease;
 }
 
 .IconHit-icon {
   font-size: 4em;
   color: hsl(262, 52%, 47%);
-  transition: all 0.5s ease;
+  transition: color 0.2s ease;
   align-self: center;
 }
 
