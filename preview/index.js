@@ -109,7 +109,7 @@ class App extends React.Component {
               <Menu
                 attribute="theme"
                 operator="and"
-                transformItems={items => items.sort((a, b) => (a < b ? -1 : 1))}
+                transformItems={items => items.sort((a, b) => (a.label < b.label ? -1 : 1))}
                 defaultRefinement="baseline"
               />
               <PoweredBy />
